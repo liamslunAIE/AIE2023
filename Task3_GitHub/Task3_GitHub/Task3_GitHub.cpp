@@ -6,6 +6,8 @@
 int main()
 {
     std::cout << "Hello World!\n";
+
+    std::cout << "This will be my third commit for this project" << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
