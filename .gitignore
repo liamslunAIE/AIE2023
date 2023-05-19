@@ -1,0 +1,11 @@
+# User configuration files
+*.user
+
+# Tool generated files
+*.vs/
+
+# Buuld artifacts
+x64/
+
+Debug/
+Release
