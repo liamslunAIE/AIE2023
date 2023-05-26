@@ -85,7 +85,7 @@ int main(int argc, char* argv[])
         fruit.DrawFruit();
 
         // Drawing the score
-        DrawText(FormatText("Score: %i", (int)snake.getScore()), 10, 900, 20, BLACK);
+        DrawText(FormatText("Score: %i", (int)snake.GetScore()), 10, 900, 20, BLACK);
 
 
         
@@ -101,23 +101,27 @@ int main(int argc, char* argv[])
             snake.Move(currentDirection);           
 
             gameEnding = snake.GameOverCollisionCheck();
-            fruitEaten = snake.FruitCollisionCheck(fruit.getFruitPosX(), fruit.getFruitPosY());
-            fruit.setFruitPos(fruitEaten, snake.getSnakePosX(), snake.getSnakePosY(), snake.getSize());
+            fruitEaten = snake.FruitCollisionCheck(fruit.GetFruitPosX(), fruit.GetFruitPosY());
+            fruit.SetFruitPos(fruitEaten, snake.GetSnakePosX(), snake.GetSnakePosY(), snake.GetSize());
             timer = 0;
         }
         
         // Changing the speed of the game
 
-        if (snake.getScore() == 5)
+        if (snake.GetScore() == 5)
         {
             timeDelay = 0.2f;
-        } else if (snake.getScore() == 10)
+        } else if (snake.GetScore() == 10)
         {
             timeDelay = 0.15f;
         }
-        else if (snake.getScore() == 15)
+        else if (snake.GetScore() == 15)
         {
             timeDelay = 0.1f;
+        }
+        else if (snake.GetScore() == 20)
+        {
+            timeDelay = 0.07f;
         }
 
         EndDrawing();

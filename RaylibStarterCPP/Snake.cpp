@@ -75,43 +75,43 @@ void Snake::Move(int d)
 
 }
 
-std::vector<int> Snake::getSnakePosX()
+std::vector<int> Snake::GetSnakePosX()
 {
 
 	return snakePosX;
 
 }
 
-std::vector<int> Snake::getSnakePosY()
+std::vector<int> Snake::GetSnakePosY()
 {
 
 	return snakePosY;
 
 }
 
-int Snake::getSize()
+int Snake::GetSize()
 {
 
 	return size;
 
 }
 
-void Snake::increaseSize()
+void Snake::IncreaseSize()
 {
 	size++;
 }
 
-int Snake::getHeadPosX()
+int Snake::GetHeadPosX()
 {
 	return headPosX;
 }
 
-int Snake::getHeadPosY()
+int Snake::GetHeadPosY()
 {
 	return headPosY;
 }
 
-float Snake::getScore()
+float Snake::GetScore()
 {
 	return score;
 }
@@ -126,7 +126,7 @@ bool Snake::FruitCollisionCheck(int fPosX, int fPosY)
 		// adding elements to the vectors
 		snakePosX.push_back(headPosX);
 		snakePosY.push_back(headPosY);
-		increaseSize();
+		IncreaseSize();
 		score++;
 		return true;
 	}
